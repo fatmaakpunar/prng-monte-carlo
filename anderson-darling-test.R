@@ -1,3 +1,4 @@
+#Bu test gerçek para deneyi ile elle üretilen 20 tane 0-1 arası sayının uniform dağılıma uygunluğunu test etmektedir. Bu testte anderson darling testi baz alınarak yapılmıştır.
 #H0:veriler Uniform (Düzgün) dağılıma uygundur.
 #H1:veriler Uniform (Düzgün) dağılıma uygun değildir.
 library(nortest) 
