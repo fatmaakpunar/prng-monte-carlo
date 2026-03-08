@@ -2,7 +2,7 @@
 library(AcceptReject)
 #POİSSON DAĞILIMI
 set.seed(0)
-data <- AcceptReject::accept_reject(
+data <- AcceptReject::accept_reject( #arka planda AcceptReject U(0,1) üretir
   n = 1000L, #1000 tane tam sayı "L"
   f = dpois, #poisson
   continuous = FALSE,
