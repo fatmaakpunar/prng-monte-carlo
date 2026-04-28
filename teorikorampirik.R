@@ -39,19 +39,17 @@ x <- -teta * log(1 - u)
 # Teorik (Analitik) Değerler
 Aort <- teta
 Avar <- teta^2
-Aols <- 1 - exp(-xx / teta)
-Atersleri <- -teta * log(1 - alfa)
+Aols <- 1 - exp(-xx / teta) #birikimli dağılım fonksiyonu
+Atersleri <- -teta * log(1 - alfa) #ters kümülatif dağılım fonksiyonu
 
 # Ampirik (Örneklemden Elde Edilen) Değerler
 Oort <- mean(x)
 Ovar <- var(x)
 Oskew <- skewness(x)
 Okurto <- kurtosis(x)
-
-# P(X < xx) Olasılığı (For döngüsü yerine R'ın vektörel yapısı kullanıldı)
+# Ampirik (Örneklem) Kümülatif Dağılım Fonksiyonu (ECDF)
 say <- sum(x < xx) 
 Ools <- say / n
-
 # Alfa (Quantile) Hesaplaması
 xsira <- sort(x)
 Otersleri <- xsira[floor(alfa * n)] 
